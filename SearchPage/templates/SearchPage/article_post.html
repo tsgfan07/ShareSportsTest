@@ -1,0 +1,18 @@
+{% extends "personal/header.html" %}
+
+{%block content %}
+	{% if user.is_authenticated and article.author == user %}
+		<a class="btn btn-default" href="{%url 'article_edit' pk=article.id%}"><span class="glyphicon glyphicon-pencil"> Bearbeiten </span></a>
+	{% endif %}
+	<h3> {{article.title}} </h3>
+	<h6> am {{article.date}} </h6>
+	<h6> von {{article.author}} </h6>
+
+	<img src="{{ article.image.url }}" class="img" style='max-height:100px;' alt="Image broken">
+
+	{{article.body|safe|linebreaks}}
+	{{article.contact_email}}
+	{{article.contact_number}}
+	{{article.geo_location}}
+
+{% endblock %}

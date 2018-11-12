@@ -1,0 +1,10 @@
+{% extends "personal/header.html" %}
+
+{%block content %}
+	{% if user.is_authenticated and post.author == user %}
+		<a class="btn btn-default" href="/blog/{{post.id}}/edit"><span class="glyphicon glyphicon-pencil"> Bearbeiten</span></a>
+	{% endif %}
+	 <h3> {{post.title}} </h3>
+	 <h6> on {{post.date}} </h6>
+	 {{post.body|safe|linebreaks}}
+{% endblock %}

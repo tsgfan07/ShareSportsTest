@@ -1,0 +1,19 @@
+{% extends "personal/header.html" %}
+
+
+{% block content %}
+
+    <div class='container-fluid'>
+        <div class="row">
+
+
+                <div class="btn-group-justified" role="group" aria-label="HomeButtons">
+                    <a class="btn btn-primary btn-block" href="{% url 'search_index' %}" role="button" style="vertical-align">Suchen</a>
+                    <a class="btn btn-success btn-block" href="{% url 'article_new' %}" role="button">Anbieten</a>
+                </div>
+
+
+        </div>
+
+    </div>
+{% endblock %}	

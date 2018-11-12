@@ -1,0 +1,24 @@
+{% include 'personal/header.html' %}
+{%block content %}
+Kategorieübersicht<br>
+
+    {% for cat in cat_list %}
+        <li>
+
+            {{cat}}
+        </li>
+    {% endfor %}
+
+
+    <form method = "POST" action = "{% url 'search' %}">
+        {% csrf_token %}
+        <select multiple="single"  name="search_select" id="services" size="5">
+        {% for cat in cat_list %}
+            <option value="{{cat}}">{{ cat }}</option>
+        {% endfor %}
+        </select>
+        <input  type = "submit" value="Submit">
+    </form>
+
+
+{%endblock%}

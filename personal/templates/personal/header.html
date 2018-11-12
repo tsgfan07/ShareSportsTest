@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+	<title>Teile Sportartikel auf GearShare</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="{% static 'personal/css/style.css' %}">
+	<style>
+	div.sticky {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		padding-top: 50px;
+		font-size: 20px;
+	}
+
+	</style>
+</head>
+
+
+<body class="body" style="background-color:white">
+
+<div class="container-fluid" style="min-height:95%; ">
+	<nav class="navbar navbar-light sticky" style="background-color: #e3f2fd;">
+		<div class="container-fluid">
+
+			<img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" class="d-inline-block align-top" width="50" height="50" alt="Image">
+			<a  class="d-inline-block align-top"  href="{% url 'index'%}">GearShare</a>
+			<li class="nav navbar-nav navbar-right">
+				{% if user.is_authenticated %}
+					<a href="#"><span class="glyphicon glyphicon-user"></span>  </a>
+					<a class="nav-link" href="#"> {{ request.user.username }}</a>
+
+					<a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+				{% else %}
+					<a href="{% url 'signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up </a>
+					<a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+				{% endif %}
+			</li>
+		</div>
+	</nav>
+
+		<div class="row">
+			<div class="w3-container w3-teal">
+				  <div class="col-sm-2">
+					  <br>
+
+				  </div>
+				  <div class="col-sm-8">
+					  <center>
+					  	<h1>Teile Sportartikel mit deinen Nachbarn</h1>
+					  </center>
+				  </div>
+			</div>
+		</div>
+		<hr>
+
+	<div class="row">
+		<div class="col-sm-2">
+			<br>
+
+			<br>
+			<!-- Great, til you resize. -->
+			<!--<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">-->
+			<div class="well bs-sidebar" id="sidebar" style="background-color:white">
+				  <ul class="nav nav-pills nav-stacked">
+					  <li><a href="{% url 'index' %}">Home</a></li>
+					  <li><a href="{% url 'search_index' %}">Suchen</a></li>
+					  <li><a href="{% url 'article_new' %}">Anbieten</a></li>
+					  <li><a href="#">Anleitung</a></li>
+					<li><a href='/contact/'>Kontakt</a></li>
+				  </ul>
+			</div> <!--well bs-sidebar affix-->
+		</div> <!--col-sm-2-->
+
+		<div class="col-sm-10">
+			<div class="mx-auto" style="width: 200px;">
+				<br>
+				<br>
+
+			</div>
+
+			 {% block content %}
+			{% endblock %}
+
+
+
+		</div>
+	</div>
+	</div>
+</body>
+
+<footer>
+	<div class="w3-container w3-teal" style='margin-left:15px'>
+		<center>
+			<p><a href="/contact/" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
+		</center>
+	</div>
+</footer>
+</html>
