@@ -3,7 +3,7 @@ from .models import Article
 from .upload_form import ArticleForm
 from django import forms
 from django.utils import timezone
-from taggit.managers import TaggableManager
+
 
 
 
