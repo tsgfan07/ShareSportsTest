@@ -35,7 +35,6 @@ ALLOWED_HOSTS = ['gearshare2018.herokuapp.com', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'watson',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
