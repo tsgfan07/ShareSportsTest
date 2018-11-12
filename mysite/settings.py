@@ -45,8 +45,6 @@ INSTALLED_APPS = [
 	'blog',
     'SearchPage',
 	'UploadPage',
-    'taggit',
-
 ]
 
 MIDDLEWARE = [
