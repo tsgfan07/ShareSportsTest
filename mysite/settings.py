@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', ')#9(4^bqxiq%e8dc&4g=olk0nk$i&s
 #DEBUG = True
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gearshare2018.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
