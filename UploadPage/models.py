@@ -1,5 +1,4 @@
 from django.db import models
-from taggit.managers import TaggableManager
 from .choices import *
 from django.contrib.auth.models import User
 from django.conf import settings
