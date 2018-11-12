@@ -28,38 +28,38 @@ def get_package_data(package):
                           for filename in filenames])
     return {package: filepaths}
 
-
-setup(
-    name='django-treasuremap',
-    version=get_version('treasuremap'),
-    url='https://github.com/silentsokolov/django-treasuremap',
-    license='MIT',
-    description='django-treasuremap app, makes it easy to store and display '
-                'the location on the map using different providers (Google, Yandex).',
-    long_description=open(join(dirname(__file__), 'README.rst')).read(),
-    author='Dmitriy Sokolov',
-    author_email='silentsokolov@gmail.com',
-    packages=get_packages('treasuremap'),
-    package_data=get_package_data('treasuremap'),
-    include_package_data=True,
-    install_requires=[],
-    python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*",
-    zip_safe=False,
-    platforms='any',
-    classifiers=[
-        'Development Status :: 5 - Production/Stable',
-        'Environment :: Web Environment',
-        'Framework :: Django',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Topic :: Utilities',
-    ],
-)
+#
+# setup(
+#     name='django-treasuremap',
+#     version=get_version('treasuremap'),
+#     url='https://github.com/silentsokolov/django-treasuremap',
+#     license='MIT',
+#     description='django-treasuremap app, makes it easy to store and display '
+#                 'the location on the map using different providers (Google, Yandex).',
+#     long_description=open(join(dirname(__file__), 'README.rst')).read(),
+#     author='Dmitriy Sokolov',
+#     author_email='silentsokolov@gmail.com',
+#     packages=get_packages('treasuremap'),
+#     package_data=get_package_data('treasuremap'),
+#     include_package_data=True,
+#     install_requires=[],
+#     python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*",
+#     zip_safe=False,
+#     platforms='any',
+#     classifiers=[
+#         'Development Status :: 5 - Production/Stable',
+#         'Environment :: Web Environment',
+#         'Framework :: Django',
+#         'Intended Audience :: Developers',
+#         'License :: OSI Approved :: MIT License',
+#         'Operating System :: OS Independent',
+#         'Programming Language :: Python',
+#         'Programming Language :: Python :: 2',
+#         'Programming Language :: Python :: 2.7',
+#         'Programming Language :: Python :: 3',
+#         'Programming Language :: Python :: 3.4',
+#         'Programming Language :: Python :: 3.5',
+#         'Programming Language :: Python :: 3.6',
+#         'Topic :: Utilities',
+#     ],
+# )
